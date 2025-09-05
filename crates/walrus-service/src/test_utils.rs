@@ -261,6 +261,15 @@ pub struct StorageNodeHandle {
     pub node_runtime_handle: Option<JoinHandle<()>>,
 }
 
+impl Drop for StorageNodeHandle {
+    fn drop(&mut self) {
+        self.cancel.cancel();
+        if let Some(handle) = self.node_runtime_handle.take() {
+            handle.abort();
+        }
+    }
+}
+
 impl StorageNodeHandleTrait for StorageNodeHandle {
     fn cancel(&self) {
         self.cancel.cancel();
@@ -694,6 +703,10 @@ impl StorageNodeHandleTrait for SimStorageNodeHandle {
 impl Drop for SimStorageNodeHandle {
     fn drop(&mut self) {
         self.cancel_token.cancel();
+        if let Some(node_id) = self.node_id {
+            tracing::info!("shutting down storage node: {:?}", node_id);
+            sui_simulator::runtime::Handle::try_current().map(|h| h.delete_node(node_id));
+        }
     }
 }
 
