@@ -1,24 +1,19 @@
-# Walrus
+# Walrus 日本語ドキュメント
 
-A decentralized blob store using [Sui](https://github.com/MystenLabs/sui) for coordination and
-governance.
+[Sui](https://github.com/MystenLabs/sui)を活用した分散型ブロブストレージのドキュメント日本語版です。
 
-## Documentation
+## このプロジェクトについて
 
-Our main documentation is available [as a Walrus Site](https://docs.wal.app) (see [the
-documentation](https://docs.wal.app/walrus-sites/intro.html) for further information on what
-this means) and on [GitHub Pages](https://mystenlabs.github.io/walrus); it is generated using
-[mdBook](https://rust-lang.github.io/mdBook/) from source files in the [`docs/book`](./docs/book)
-directory.
+このリポジトリは、[MystenLabs/walrus](https://github.com/MystenLabs/walrus)の公式ドキュメントを日本語に翻訳したものです。原文は[Walrus Site](https://docs.wal.app)で公開されており、このサイトでは[mdBook](https://rust-lang.github.io/mdBook/)を使用して[`docs/book`](./docs/book)ディレクトリのソースファイルから生成されています。
 
-You can also build the documentation locally (assuming you have Rust installed):
+ドキュメントをローカルでビルドすることもできます（Rustがインストールされている前提）：
 
 ```sh
 cargo install mdbook mdbook-admonish mdbook-katex mdbook-linkcheck mdbook-tabs mdbook-templates --locked
 mdbook serve
 ```
 
-After this, you can browse the documentation at <http://localhost:3000>.
+この後、<http://localhost:3000>でドキュメントを閲覧できます。
 
 There are some additional documentation resources:
 

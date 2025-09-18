@@ -1,1 +1,22 @@
-../../../crates/walrus-upload-relay/walrus_upload_relay_config_example.yaml
+# Walrus Upload Relay Configuration Example
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+storage_nodes:
+  - endpoint: "https://storage-node-1.example.com"
+  - endpoint: "https://storage-node-2.example.com"
+
+max_file_size: 1073741824  # 1GB
+
+timeouts:
+  upload: 300
+  download: 60
+
+rate_limits:
+  requests_per_second: 10
+  burst_size: 20
+
+logging:
+  level: "info"
+  format: "json"

@@ -6,6 +6,25 @@
 .nvimrc
 .DS_Store
 
+# 日本語版ドキュメント専用設定 - 以下のファイル/ディレクトリは上流から取り込まない
+# Rust関連（削除済み・取り込み禁止）
+crates/
+target/
+Cargo.toml
+Cargo.lock
+rust-toolchain.toml
+clippy.toml
+deny.toml
+diesel.toml
+.tarpaulin.toml
+
+# 契約・Docker・スクリプト（削除済み・取り込み禁止）
+contracts/
+mainnet-contracts/
+testnet-contracts/
+docker/
+scripts/
+
 # Rust build and test files
 **/target
 tarpaulin-report.html

@@ -1,1 +1,10 @@
-../../../crates/walrus-sdk/client_config_example.yaml
+# Example Walrus Client Configuration
+sui_config: "~/.sui/sui_config/client.yaml"
+
+mainnet:
+  system_object: "0x2e88d00c2c63996b4c4843cd616b5bbad12f0da4b47aebef3e43ffe2d5b3b4c8"
+  walrus_package: "0xfdc88f7d7cf30afab2f82e8380d11ee8f70efb90e863d1de8616fae1bb09ea77"
+  
+testnet:
+  system_object: "0xbb24e2737302c9b35c8f5a42da8e60ffe60b1ee8e9eab2e3e3d89df0e4b1c4c6"
+  walrus_package: "0x6efc5e2f8f0dcaabb80f1e2b3a5ee1b1c4c5c6c7c8c9d0e1e2e3e4e5e6e7e8e9"
