@@ -15,6 +15,11 @@ mdbook serve
 
 この後、<http://localhost:3000>でドキュメントを閲覧できます。
 
+## 🌐 GitHub Pages デプロイ
+このサイトは GitHub Pages で自動デプロイされます：
+- 公開URL: `https://yourusername.github.io/walrus-ja`
+- 自動更新: mainブランチプッシュ時
+
 There are some additional documentation resources:
 
 - Usage examples are available under [docs/examples](./docs/examples/).
