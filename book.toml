@@ -13,17 +13,17 @@ additional-css = ["docs/mdbook-admonish.css", "docs/theme/tabs.css"]
 additional-js = ["docs/theme/tabs.js"]
 theme = "docs/theme"
 
-[output.linkcheck]
-exclude = [
-  'faucet\.sui\.io',
-  'github\.com',
-  'google\.com',
-  'x\.com',
-]
-follow-web-links = true
-optional = true
-traverse-parent-directories = true
-warning-policy = "error"
+# [output.linkcheck]
+# exclude = [
+#   'faucet\.sui\.io',
+#   'github\.com',
+#   'google\.com',
+#   'x\.com',
+# ]
+# follow-web-links = true
+# optional = true
+# traverse-parent-directories = true
+# warning-policy = "error"
 
 [preprocessor]
 
@@ -37,11 +37,11 @@ on_failure = "bail"
 block-delimiter = { left = "\\[", right = "\\]" }
 inline-delimiter = { left = "\\(", right = "\\)" }
 
-[preprocessor.gettext]
-after = ["links"]
+# [preprocessor.gettext]
+# after = ["links"]
 
-[preprocessor.templates]
-command = "mdbook-templates"
-path = "docs/book/assets/operators.json"
+# [preprocessor.templates]
+# command = "mdbook-templates"
+# path = "docs/book/assets/operators.json"
 
 [preprocessor.tabs]
